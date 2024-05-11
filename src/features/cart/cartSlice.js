@@ -11,7 +11,10 @@ const initialState = {
 };
 
 export const getCartItems = createAsyncThunk("cart/getCartItems", () => {
-  return fetch(url)
+  return fetch(url, {
+    method: "GET",
+    mode: "no-cors", // Set the request mode to 'no-cors'
+  })
     .then((res) => res.json())
     .catch((err) => console.log(err));
 });

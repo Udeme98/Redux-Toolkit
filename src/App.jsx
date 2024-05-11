@@ -10,9 +10,9 @@ const App = () => {
   const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [cartItems]);
+  // useEffect(() => {
+  //   dispatch(calculateTotals());
+  // }, [cartItems]);
 
   useEffect(() => {
     dispatch(getCartItems());
